@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+  }
+  
+  header, nav, footer, section {
+    padding: 10px;
+  }
+  
+  header {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background-color: #2a3b55;
+    color: rgb(165, 172, 135);
+    z-index: 1000;
+    
+  }
+
+  header img {
+    height: 60px; 
+    width: auto;    
+  }
+  
+
+  header h1 {
+    border-bottom: 2px solid #8d8989;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-top: 10px;
+    padding: 0;
+  }
+  
+  nav a {
+    color: rgb(189, 185, 185);
+    text-decoration: none;
+  }
+  
+  main {
+    color: #bdbe63;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  section img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  section img:hover {
+    transform: scale(1.05);
+  }
+  
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(55, 65, 64);
+    padding: 40px 20px;
+    align-items: center;
+  }
+    
+  #sessao\ 2::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color:#8d8989;
+    margin-bottom: 40px;
+  }
+  
+  .galeria-imagens p {
+    max-width: 300px;
+    text-align: justify;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .galeria-imagens {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  footer:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color:#8d8989;
+    margin-bottom: 0px;
+  }
+  
+  footer {
+    text-align: center;
+    background-color: rgb(55, 65, 64);
+    color: white;
+    padding: px;
+  }
