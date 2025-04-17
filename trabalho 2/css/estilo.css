@@ -18,12 +18,11 @@ body {
 }
 
 header {
-  position: relative;  /* Não fixo, mas ocupa 100vh */
+  position: sticky;
   top: 0;
   text-align: center;
   background-color: #2a3b55;
   color: rgb(165, 172, 135);
-  height: 100vh;  /* Cabeçalho com altura de 100% da altura da tela */
   padding: 20px;
 }
 
@@ -86,9 +85,9 @@ section {
 }
 
 section img {
-  width: 250px;  /* Tamanho fixo para todas as imagens */
-  height: 375px; /* Altura fixa para todas as imagens */
-  object-fit: cover; /* Ajusta a imagem sem distorção */
+  width: 250px;  
+  height: 375px; 
+  object-fit: cover; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
