@@ -55,7 +55,7 @@ nav a:hover {
 
 
 main {
-  background-color: #565D7A;
+  background-color: #23283d;
   color: rgb(255, 255, 255);  
   padding: 120px 20px 20px;
   flex-grow: 1;
@@ -143,7 +143,7 @@ section img:hover {
 footer {
   text-align: center;
   color: rgb(255, 255, 255);
-  background-color: #565D7A;
+  background-color: #23283d;
   padding: 1px ;
 }
 
