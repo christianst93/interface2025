@@ -1,54 +1,20 @@
-
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;  
 }
 
-header {
+/* Geral */
+body {
   font-family: 'Lato', sans-serif;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  text-align: center;
-  background-image: linear-gradient(to bottom, #A1ADE5, #81B3DC, #AC469C);
-  color: rgb(255, 255, 255);
-  
-}
-
-header h1 {
-  color: rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(255, 255, 255); 
-}
-
-header img {
-  height: 65px;
-  width: auto;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  justify-content: flex-start; 
-}
-
-nav a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #bdbe63;
-}
-
-main {
-  font-family: 'Lato', sans-serif;
-  text-align: justify;
   background-color: #5d5e63;
-  color: rgb(255, 255, 255);  
-  padding: 120px 20px 20px;
-  flex-grow: 1;
+  color: #fff;
+}
+
+h2 {
+  margin: 80px 0 30px;
+  text-align: center;
 }
 
 section {
@@ -57,64 +23,82 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px; 
+  padding: 50px;
 }
 
-section h2 {
-  margin-top: 80px;
-  margin-bottom: 30px;
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
   text-align: center;
+  background-image: linear-gradient(to bottom, #A1ADE5, #81B3DC, #AC469C);
+  color: #fff;
+  border-radius: 3px;
 }
 
+header h1 {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+header img {
+  height: 65px;
+  width: auto;
+}
+
+/* Navegação */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #bdbe63;
+}
+
+/* Main */
+main {
+  text-align: justify;
+  padding: 120px 20px 20px;
+  flex-grow: 1;
+}
+
+/* Sessão 1: Vídeos */
 #sessao1 .div-videos {
   display: flex;
-  justify-content: space-around; 
+  justify-content: space-around;
   align-items: flex-start;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-#sessao1 .div-videos .item {
-  width: calc(33.33% - 20px); 
+#sessao1 .item {
+  width: calc(33.33% - 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-#sessao1 .div-videos .item iframe {
+#sessao1 iframe {
   width: 100%;
-  height: auto;
   aspect-ratio: 16 / 9;
-  max-width: 100%;
-  border-radius: 7px; 
+  border-radius: 7px;
 }
 
-#sessao1 .div-videos .item p {
+#sessao1 p {
   padding: 10px;
 }
 
-#sessao2 img {
-  width: 100%;
-  max-width: 180px;
-  height: auto;
-  aspect-ratio: 9 / 12;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-  margin-bottom: 15px;
-}
-
-section img:hover {
-  transform: scale(1.05);
-}
-
-h2#campeoes {
-  margin-top: 150px;
-  
-}
-
+/* Sessão 2: Imagens */
 #sessao2 .div-imagens {
   display: flex;
   flex-wrap: wrap;
@@ -123,17 +107,17 @@ h2#campeoes {
 }
 
 #sessao2 .item {
-  width: calc(33.33% - 20px); 
-  margin-bottom: 40px; 
+  width: calc(33.33% - 20px);
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-#sessao2 .item img {
-  width: 100%; 
-  height: auto;
+#sessao2 img {
+  width: 100%;
+  max-width: 180px;
   aspect-ratio: 9 / 12;
   object-fit: cover;
   border-radius: 10px;
@@ -142,145 +126,121 @@ h2#campeoes {
   margin-bottom: 10px;
 }
 
-#sessao2 .item img:hover {
+/* Hover para imagens */
+section img:hover {
   transform: scale(1.05);
 }
 
+/* Sessão 3: Formulário */
 #sessao3 {
-    min-height: 100vh;
-    padding: 120px 20px;
+  min-height: 100vh;
+  padding: 120px 20px;
 }
 
-#sessao3 h2#Cadastro {
-    margin-top: 20px;
-    margin-bottom: 20px;
+#sessao3 h2 {
+  margin: 20px 0;
 }
-div.espaco-formulario {
-    border: black;
-    border-radius: 3px;
-    background-color: rgb(255, 255, 255);
-    color: black !important; 
-    width: 100%;
-    padding: 20px;
-    font-size: 15px;
+
+.espaco-formulario {
+  background-color: #fff;
+  color: #000 !important;
+  border-radius: 3px;
+  width: 100%;
+  padding: 20px;
+  font-size: 15px;
 }
 
 .formularios-grid {
-    width: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 fieldset {
-    display: grid;
-    grid-template-columns: auto 1fr;      
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
-
 
 fieldset input[type="submit"] {
-    font-size: 1em;
-    padding: 10px;
-}
-input, optgroup, select, textarea {
-    margin: 2px;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
-button {
-    margin-top: 15px;
-    border-radius: 3px;
-    width: 75px;
+  font-size: 1em;
+  padding: 10px;
 }
 
+input, select, textarea {
+  margin: 2px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  margin-top: 15px;
+  border-radius: 3px;
+  width: 75px;
+}
+
+/* Sessão 4: Galeria */
 #sessao4 {
-    min-height: 100vh;
-    width: 100%;
-    padding: 120px 0; 
-    display: grid;
-    grid-template-rows: auto 1fr;
-    justify-items: center;
-    align-content: center;
-    background-color: #5d5e63;
+  min-height: 100vh;
+  padding: 120px 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  align-content: center;
+  background-color: #5d5e63;
 }
 
 #sessao4 h2 {
-    grid-row: 1;
-    color: white;
-    margin-bottom: 30px;
-    text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-div.galeria-grid {
-    background-color: rgb(255, 255, 255);
-    padding: 5px;
-    grid-row: 2;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 80px);
-    border-radius: 5px;
-    gap: 5px;    
+.galeria-grid {
+  background-color: #fff;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 80px);
+  border-radius: 5px;
+  gap: 5px;
 }
 
-.galeria-item:nth-child(1) {
-    grid-column: 1 / span 6;  
-    grid-row: 1 / span 4;     
+.galeria-item {
+  overflow: hidden;
 }
 
-.galeria-item:nth-child(2) {
-    grid-column: 7 / span 6;  
-    grid-row: 1 / span 2;     
-}
-
-.galeria-item:nth-child(3) {
-    grid-column: 7 / span 3; 
-    grid-row: 3 / span 2;     
-}
-
-.galeria-item:nth-child(4) {
-    grid-column: 10 / span 3;
-    grid-row: 3 / span 2;    
-}
-
-
-.galeria-item:nth-child(5) {
-    grid-column: 1 / span 8; 
-    grid-row: 5 / span 2;    
-}
-
-
-.galeria-item:nth-child(6) {
-  grid-column: 9 / span 4;  
-  grid-row: 5 / span 2;
-}
+.galeria-item:nth-child(1) { grid-area: 1 / 1 / 5 / 7; }
+.galeria-item:nth-child(2) { grid-area: 1 / 7 / 3 / 13; }
+.galeria-item:nth-child(3) { grid-area: 3 / 7 / 5 / 10; }
+.galeria-item:nth-child(4) { grid-area: 3 / 10 / 5 / 13; }
+.galeria-item:nth-child(5) { grid-area: 5 / 1 / 7 / 9; }
+.galeria-item:nth-child(6) { grid-area: 5 / 9 / 7 / 13; }
 
 .galeria-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
 }
 
 .galeria-item img:hover {
-    transform: scale(1.03);
-    z-index: 2;
+  transform: scale(1.03);
+  z-index: 2;
 }
-
-
-
 
 footer {
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: #fff;
   background-color: #5d5e63;
-  padding: 1px ;
+  padding: 1px;
 }
 
 footer a {
-  color: #bdbe63;  
+  color: #bdbe63;
 }
 
 footer a:hover {
@@ -292,133 +252,111 @@ footer p {
   font-size: 14px;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
-  #sessao1 .div-imagens .item,
-  #sessao2 .item {
-      width: calc(50% - 20px); 
-  }
-
-  nav ul {        
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+  nav ul {
+    flex-direction: row;
+    align-items: center;
   }
 
   header h1 {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   header img {
-      height: 50px;
+    height: 50px;
   }
 
-@media (max-width: 768px) {
-  #sessao1 .div-videos .item {
-    width: 100%; 
-  }
-}
-
-@media (max-width: 500px) { 
+  #sessao1 .item,
   #sessao2 .item {
-      width: 100%; 
+    width: 100%
   }
 
-  header h1 {
-      font-size: 20px;
+  .espaco-formulario {
+    font-size: 15px;
   }
 
-  nav a {
-      font-size: 16px;
+  fieldset {
+    gap: 8px 12px;
   }
-
-  section h2 {
-      font-size: 20px;
-  }
-
-  footer p {
-      font-size: 12px;
-  }
-}
-
-@media (max-width: 375px) {
-  #sessao1 .div-videos .item
-  #sessao2 .item {
-      width: 100%;
-  }
-
-  header h1 {
-      font-size: 18px;
-  }
-  
-  nav a {
-      font-size: 14px;
-  }
-
-  section h2 {
-      font-size: 18px;
-  }
-
-  footer p {
-      font-size: 10px;
-  }
-
-  header img {
-      height: 40px;
-  }
-}
-@media (max-width: 768px) {
-    div.espaco-formulario {
-        font-size: 15px;
-    }
-    
-    fieldset {
-        gap: 8px 12px;
-    }
 }
 
 @media (max-width: 500px) {
-    .formularios-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    div.espaco-formulario {
-        width: 100%;
-        max-width: 100%;
-        padding: 15px;
-        font-size: 14px;
-        box-sizing: border-box;
-    }
-    
-    fieldset {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-    
-    fieldset input[type="submit"] {
-        grid-column: 1;
-        padding: 8px;
-        width: 100%;
-    }
-    
-    fieldset label,
-    fieldset input,
-    fieldset select {
-        font-size: 1em;
-        width: 100%;
-    }
+  #sessao2 .item {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  .formularios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .espaco-formulario {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  fieldset {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  fieldset input[type="submit"] {
+    width: 100%;
+  }
 }
 
 @media (max-width: 375px) {
-    .formularios-grid {
-        padding: 0 10px;
-    }
-    
-    div.espaco-formulario {
-        padding: 12px;
-        font-size: 13px;
-    }
-    fieldset {
-        gap: 6px 10px;
-    }
+  #sessao1 .item,
+  #sessao2 .item {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  section h2 {
+    font-size: 18px;
+  }
+
+  footer p {
+    font-size: 10px;
+  }
+
+  header img {
+    height: 40px;
+  }
+
+  .formularios-grid {
+    padding: 0 10px;
+  }
+
+  .espaco-formulario {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  fieldset {
+    gap: 6px 10px;
+  }
 }
