@@ -197,7 +197,7 @@ button {
 #sessao4 {
     min-height: 100vh;
     width: 100%;
-    padding: 120px 0; /* Removido padding lateral para controle preciso */
+    padding: 120px 0; 
     display: grid;
     grid-template-rows: auto 1fr;
     justify-items: center;
@@ -212,45 +212,45 @@ button {
     text-align: center;
 }
 
-.galeria-grid {
+div.galeria-grid {
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
     grid-row: 2;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 80px);
-    gap: 5px;
-    
+    gap: 5px;    
 }
 
-/* Posicionamento preciso baseado na referência */
 .galeria-item:nth-child(1) {
-    grid-column: 1 / span 6;  /* Ocupa 6 colunas (esquerda) */
-    grid-row: 1 / span 4;     /* Altura de 4 linhas */
+    grid-column: 1 / span 6;  
+    grid-row: 1 / span 4;     
 }
 
 .galeria-item:nth-child(2) {
-    grid-column: 7 / span 6;  /* Ocupa 6 colunas (direita) */
-    grid-row: 1 / span 2;     /* Altura de 2 linhas */
+    grid-column: 7 / span 6;  
+    grid-row: 1 / span 2;     
 }
 
 .galeria-item:nth-child(3) {
-    grid-column: 7 / span 3;  /* Metade direita superior */
-    grid-row: 3 / span 2;     /* Abaixo da imagem 2 */
+    grid-column: 7 / span 3; 
+    grid-row: 3 / span 2;     
 }
 
 .galeria-item:nth-child(4) {
-    grid-column: 10 / span 3; /* Metade direita inferior */
-    grid-row: 3 / span 2;     /* Ao lado da imagem 3 */
+    grid-column: 10 / span 3;
+    grid-row: 3 / span 2;    
 }
 
-/* Imagem 5 ajustada para deixar espaço para a 6 */
+
 .galeria-item:nth-child(5) {
-    grid-column: 1 / span 8;  /* Começa na coluna 5, ocupa 8 colunas */
-    grid-row: 5 / span 2;     /* Duas linhas na parte inferior */
+    grid-column: 1 / span 8; 
+    grid-row: 5 / span 2;    
 }
 
-/* Nova posição da imagem 6 - encaixada no espaço vazio */
+
 .galeria-item:nth-child(6) {
-  grid-column: 9 / span 4;   /* Para esquerda inferior */
+  grid-column: 9 / span 4;  
   grid-row: 5 / span 2;
 }
 
@@ -298,8 +298,10 @@ footer p {
   }
 
   nav ul {
-      flex-direction: column;
-      align-items: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
   }
 
   header h1 {
@@ -309,10 +311,10 @@ footer p {
   header img {
       height: 50px;
   }
-}
+
 @media (max-width: 768px) {
   #sessao1 .div-videos .item {
-    width: 100%; /* Um vídeo por linha */
+    width: 100%; 
   }
 }
 
@@ -376,7 +378,7 @@ footer p {
 
 @media (max-width: 500px) {
     .formularios-grid {
-        grid-template-columns: 1fr; /* Força uma coluna */
+        grid-template-columns: 1fr;
     }
     
     div.espaco-formulario {
