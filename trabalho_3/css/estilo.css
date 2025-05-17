@@ -45,7 +45,7 @@ nav a:hover {
 main {
   font-family: 'Lato', sans-serif;
   text-align: justify;
-  background-color: #23283d;
+  background-color: #5d5e63;
   color: rgb(255, 255, 255);  
   padding: 120px 20px 20px;
   flex-grow: 1;
@@ -82,7 +82,7 @@ section h2 {
   text-align: center;
 }
 
-#sessao1 div.div-videos .item iframe {
+#sessao1 .div-videos .item iframe {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
@@ -202,7 +202,7 @@ button {
     grid-template-rows: auto 1fr;
     justify-items: center;
     align-content: center;
-    background-color: #23283d;
+    background-color: #5d5e63;
 }
 
 #sessao4 h2 {
@@ -219,6 +219,7 @@ div.galeria-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 80px);
+    border-radius: 5px;
     gap: 5px;    
 }
 
@@ -274,7 +275,7 @@ div.galeria-grid {
 footer {
   text-align: center;
   color: rgb(255, 255, 255);
-  background-color: #23283d;
+  background-color: #5d5e63;
   padding: 1px ;
 }
 
@@ -297,7 +298,7 @@ footer p {
       width: calc(50% - 20px); 
   }
 
-  nav ul {
+  nav ul {        
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -341,7 +342,7 @@ footer p {
 }
 
 @media (max-width: 375px) {
-  #sessao1 .div-imagens .item,
+  #sessao1 .div-videos .item
   #sessao2 .item {
       width: 100%;
   }
@@ -349,7 +350,7 @@ footer p {
   header h1 {
       font-size: 18px;
   }
-
+  
   nav a {
       font-size: 14px;
   }
