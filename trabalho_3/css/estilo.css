@@ -66,10 +66,6 @@ section h2 {
   text-align: center;
 }
 
-iframe {
-  border: none;
-}
-
 #sessao1 .div-videos {
   display: flex;
   justify-content: space-around; 
@@ -85,12 +81,13 @@ iframe {
   align-items: center;
   text-align: center;
 }
-#sessao1 .div-videos .item iframe {
+
+#sessao1 div.div-videos .item iframe {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
   max-width: 100%;
-  border: none;
+  border-radius: 7px; 
 }
 
 #sessao1 .div-videos .item p {
