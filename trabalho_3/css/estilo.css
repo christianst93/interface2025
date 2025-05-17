@@ -66,6 +66,9 @@ section h2 {
   text-align: center;
 }
 
+iframe {
+  border: none;
+}
 
 #sessao1 .div-videos {
   display: flex;
