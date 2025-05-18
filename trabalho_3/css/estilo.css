@@ -1,11 +1,9 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;  
 }
 
-/* Geral */
 body {
   font-family: 'Lato', sans-serif;
   background-color: #5d5e63;
@@ -26,7 +24,6 @@ section {
   padding: 50px;
 }
 
-/* Header */
 header {
   position: fixed;
   width: 100%;
@@ -47,7 +44,7 @@ header img {
   width: auto;
 }
 
-/* Navegação */
+
 nav ul {
   display: flex;
   list-style: none;
@@ -64,14 +61,13 @@ nav a:hover {
   color: #bdbe63;
 }
 
-/* Main */
+
 main {
   text-align: justify;
   padding: 120px 20px 20px;
   flex-grow: 1;
 }
 
-/* Sessão 1: Vídeos */
 #sessao1 .div-videos {
   display: flex;
   justify-content: space-around;
@@ -98,7 +94,6 @@ main {
   padding: 10px;
 }
 
-/* Sessão 2: Imagens */
 #sessao2 .div-imagens {
   display: flex;
   flex-wrap: wrap;
@@ -126,12 +121,12 @@ main {
   margin-bottom: 10px;
 }
 
-/* Hover para imagens */
+
 section img:hover {
   transform: scale(1.05);
 }
 
-/* Sessão 3: Formulário */
+
 #sessao3 {
   min-height: 100vh;
   padding: 120px 20px;
@@ -180,7 +175,6 @@ button {
   width: 75px;
 }
 
-/* Sessão 4: Galeria */
 #sessao4 {
   min-height: 100vh;
   padding: 120px 0;
@@ -198,13 +192,13 @@ button {
 }
 
 .galeria-grid {
-  background-color: #fff;
-  padding: 5px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(6, 80px);
-  border-radius: 5px;
-  gap: 5px;
+    background-color: #fff;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 80px);
+    border-radius: 5px;
+    gap: 5px;
 }
 
 .galeria-item {
@@ -252,7 +246,7 @@ footer p {
   font-size: 14px;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   nav ul {
     flex-direction: row;
@@ -269,7 +263,7 @@ footer p {
 
   #sessao1 .item,
   #sessao2 .item {
-    width: 100%
+    width: 100%;
   }
 
   .espaco-formulario {
@@ -359,4 +353,17 @@ footer p {
   fieldset {
     gap: 6px 10px;
   }
+}
+
+@media (max-width: 768px) {
+  .galeria-grid {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 50px);
+  }
+  .galeria-item:nth-child(1) { grid-area: 1 / 1 / 5 / 7; } 
+  .galeria-item:nth-child(2) { grid-area: 1 / 7 / 3 / 13; }  
+  .galeria-item:nth-child(3) { grid-area: 3 / 7 / 5 / 10; }
+  .galeria-item:nth-child(4) { grid-area: 3 / 10 / 5 / 13; }
+  .galeria-item:nth-child(5) { grid-area: 5 / 1 / 7 / 9; }
+  .galeria-item:nth-child(6) { grid-area: 5 / 9 / 7 / 13; }
 }
