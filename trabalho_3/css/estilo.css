@@ -21,7 +21,7 @@ section img:hover{transform:scale(1.05)}
 #sessao3 h2{margin:20px 0}
 .espaco-formulario{background-color:#fff;color:#000!important;border-radius:3px;width:100%;padding:20px;font-size:15px}
 .formularios-grid{width:80%;display:grid;grid-template-columns:1fr 1fr;gap:20px}
-fieldset{display:grid;grid-template-columns:auto 1fr}
+fieldset{padding: 5px;display:grid;grid-template-columns:auto 1fr}
 fieldset input[type="submit"]{font-size:1em;padding:10px}
 input,select,textarea{margin:2px;font-family:inherit;font-size:inherit;line-height:inherit}
 button{margin-top:15px;border-radius:3px;width:75px}#sessao4{min-height:100vh;padding:120px 0;display:grid;grid-template-rows:auto 1fr;justify-items:center;align-content:center;background-color:#373739}
