@@ -50,6 +50,7 @@ nav ul {
   display: flex;
   list-style: none;
   gap: 20px;
+  padding-bottom: 10px;
   justify-content: flex-start;
 }
 
