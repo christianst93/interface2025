@@ -1,371 +1,79 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;  
-}
-
-body {
-  font-family: 'Lato', sans-serif;
-  background-color: #373739;
-  color: #fff;
-  font-display: swap;
-}
-
-h2 {
-  margin: 80px 0 30px;
-  text-align: center;
-}
-
-section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  text-align: center;
-  background-image: linear-gradient(to bottom, #A1ADE5, #81B3DC, #AC469C);
-  color: #fff;
-  border-radius: 3px;
-}
-
-header h1 {
-  color: #fff;
-  border-bottom: 1px solid #fff;
-}
-
-header img {
-  height: 65px;
-  width: auto;
-}
-
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  padding-bottom: 10px;
-  justify-content: flex-start;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #99D0FF;
-}
-
-
-main {
-  text-align: justify;
-  padding: 120px 20px 20px;
-  flex-grow: 1;
-}
-
-#sessao1 .div-videos {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-#sessao1 .item {
-  width: calc(33.33% - 20px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-#sessao1 iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 7px;
-}
-
-#sessao1 p {
-  padding: 10px;
-}
-
-#sessao2 .div-imagens {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-
-#sessao2 .item {
-  width: calc(33.33% - 20px);
-  margin-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-#sessao2 img {
-  width: 100%;
-  max-width: 180px;
-  aspect-ratio: 9 / 12;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-  margin-bottom: 10px;
-}
-
-
-section img:hover {
-  transform: scale(1.05);
-}
-
-
-#sessao3 {
-  min-height: 100vh;
-  padding: 120px 20px;
-}
-
-#sessao3 h2 {
-  margin: 20px 0;
-}
-
-.espaco-formulario {
-  background-color: #fff;
-  color: #000 !important;
-  border-radius: 3px;
-  width: 100%;
-  padding: 20px;
-  font-size: 15px;
-}
-
-.formularios-grid {
-  width: 80%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-fieldset {
-  display: grid;
-  grid-template-columns: auto 1fr;
-}
-
-fieldset input[type="submit"] {
-  font-size: 1em;
-  padding: 10px;
-}
-
-input, select, textarea {
-  margin: 2px;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-button {
-  margin-top: 15px;
-  border-radius: 3px;
-  width: 75px;
-}
-
-#sessao4 {
-  min-height: 100vh;
-  padding: 120px 0;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  justify-items: center;
-  align-content: center;
-  background-color: #373739;
-}
-
-#sessao4 h2 {
-  color: white;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.galeria-grid {
-    background-color: #fff;
-    padding: 5px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 80px);
-    border-radius: 5px;
-    gap: 5px;
-}
-
-.galeria-item {
-  overflow: hidden;
-}
-
-.galeria-item:nth-child(1) { grid-area: 1 / 1 / 5 / 7; }
-.galeria-item:nth-child(2) { grid-area: 1 / 7 / 3 / 13; }
-.galeria-item:nth-child(3) { grid-area: 3 / 7 / 5 / 10; }
-.galeria-item:nth-child(4) { grid-area: 3 / 10 / 5 / 13; }
-.galeria-item:nth-child(5) { grid-area: 5 / 1 / 7 / 9; }
-.galeria-item:nth-child(6) { grid-area: 5 / 9 / 7 / 13; }
-
-.galeria-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-.galeria-item img:hover {
-  transform: scale(1.03);
-  z-index: 2;
-}
-
-footer {
-  text-align: center;
-  color: #fff;
-  background-color: #373739;
-  padding: 1px;
-}
-
-footer a {
-  color: #99D0FF;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer p {
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  header h1 {
-    font-size: 24px;
-  }
-
-  header img {
-    height: 50px;
-  }
-
-  #sessao1 .item,
-  #sessao2 .item {
-    width: 100%;
-  }
-
-  .espaco-formulario {
-    font-size: 15px;
-  }
-
-  fieldset {
-    gap: 8px 12px;
-  }
-}
-
-@media (max-width: 500px) {
-  #sessao2 .item {
-    width: 100%;
-  }
-
-  header h1 {
-    font-size: 20px;
-  }
-
-  nav a {
-    font-size: 16px;
-  }
-
-  section h2 {
-    font-size: 20px;
-  }
-
-  footer p {
-    font-size: 12px;
-  }
-
-  .formularios-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .espaco-formulario {
-    padding: 15px;
-    font-size: 14px;
-  }
-
-  fieldset {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  fieldset input[type="submit"] {
-    width: 100%;
-  }
-}
-
-@media (max-width: 375px) {
-  #sessao1 .item,
-  #sessao2 .item {
-    width: 100%;
-  }
-
-  header h1 {
-    font-size: 18px;
-  }
-
-  nav a {
-    font-size: 14px;
-  }
-
-  section h2 {
-    font-size: 18px;
-  }
-
-  footer p {
-    font-size: 10px;
-  }
-
-  header img {
-    height: 40px;
-  }
-
-  .formularios-grid {
-    padding: 0 10px;
-  }
-
-  .espaco-formulario {
-    padding: 12px;
-    font-size: 13px;
-  }
-
-  fieldset {
-    gap: 6px 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  .galeria-grid {
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 50px);
-  }
-  .galeria-item:nth-child(1) { grid-area: 1 / 1 / 5 / 7; } 
-  .galeria-item:nth-child(2) { grid-area: 1 / 7 / 3 / 13; }  
-  .galeria-item:nth-child(3) { grid-area: 3 / 7 / 5 / 10; }
-  .galeria-item:nth-child(4) { grid-area: 3 / 10 / 5 / 13; }
-  .galeria-item:nth-child(5) { grid-area: 5 / 1 / 7 / 9; }
-  .galeria-item:nth-child(6) { grid-area: 5 / 9 / 7 / 13; }
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Lato',sans-serif;background-color:#373739;color:#fff;font-display:swap}
+h2{margin:80px 0 30px;text-align:center}
+section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:50px}
+header{position:fixed;width:100%;z-index:10;text-align:center;background-image:linear-gradient(to bottom,#A1ADE5,#81B3DC,#AC469C);color:#fff;border-radius:3px}
+header h1{color:#fff;border-bottom:1px solid #fff}
+header img{height:65px;width:auto}
+nav ul{display:flex;list-style:none;gap:20px;padding-bottom:10px;justify-content:flex-start}
+nav a{color:#fff;text-decoration:none}
+nav a:hover{color:#99D0FF}
+main{text-align:justify;padding:120px 20px 20px;flex-grow:1}
+#sessao1 .div-videos{display:flex;justify-content:space-around;align-items:flex-start;gap:20px;flex-wrap:wrap}
+#sessao1 .item{width:calc(33.33% - 20px);display:flex;flex-direction:column;align-items:center;text-align:center}
+#sessao1 iframe{width:100%;aspect-ratio:16 / 9;border-radius:7px}
+#sessao1 p{padding:10px}
+#sessao2 .div-imagens{display:flex;flex-wrap:wrap;justify-content:space-around;align-items:flex-start}
+#sessao2 .item{width:calc(33.33% - 20px);margin-bottom:40px;display:flex;flex-direction:column;align-items:center;text-align:center}
+#sessao2 img{width:100%;max-width:180px;aspect-ratio:9 / 12;object-fit:cover;border-radius:10px;box-shadow:0 4px 8px rgb(0 0 0 / .3);transition:transform 0.3s ease;margin-bottom:10px}
+section img:hover{transform:scale(1.05)}
+#sessao3{min-height:100vh;padding:120px 20px}
+#sessao3 h2{margin:20px 0}
+.espaco-formulario{background-color:#fff;color:#000!important;border-radius:3px;width:100%;padding:20px;font-size:15px}
+.formularios-grid{width:80%;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+fieldset{display:grid;grid-template-columns:auto 1fr}
+fieldset input[type="submit"]{font-size:1em;padding:10px}
+input,select,textarea{margin:2px;font-family:inherit;font-size:inherit;line-height:inherit}
+button{margin-top:15px;border-radius:3px;width:75px}#sessao4{min-height:100vh;padding:120px 0;display:grid;grid-template-rows:auto 1fr;justify-items:center;align-content:center;background-color:#373739}
+#sessao4 h2{color:#fff;margin-bottom:30px;text-align:center}
+.galeria-grid{background-color:#fff;padding:5px;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(6,80px);border-radius:5px;gap:5px}
+.galeria-item{overflow:hidden}
+.galeria-item:nth-child(1){grid-area:1 / 1 / 5 / 7}
+.galeria-item:nth-child(2){grid-area:1 / 7 / 3 / 13}
+.galeria-item:nth-child(3){grid-area:3 / 7 / 5 / 10}
+.galeria-item:nth-child(4){grid-area:3 / 10 / 5 / 13}
+.galeria-item:nth-child(5){grid-area:5 / 1 / 7 / 9}
+.galeria-item:nth-child(6){grid-area:5 / 9 / 7 / 13}
+.galeria-item img{width:100%;height:100%;object-fit:cover;border-radius:5px;box-shadow:0 2px 4px rgb(0 0 0 / .2);transition:transform 0.3s ease}
+.galeria-item img:hover{transform:scale(1.03);z-index:2}
+footer{text-align:center;color:#fff;background-color:#373739;padding:1px}
+footer a{color:#99D0FF}footer a:hover{text-decoration:underline}
+footer p{margin-top:10px;font-size:14px}
+@media (max-width:768px)
+{nav ul{flex-direction:row;align-items:center}
+ header h1{font-size:24px}
+ header img{height:50px}
+ #sessao1 .item,
+ #sessao2 .item{width:100%}
+ .espaco-formulario{font-size:15px}
+ fieldset{gap:8px 12px}}
+@media (max-width:500px)
+{#sessao2 .item{width:100%}
+ header h1{font-size:20px}
+ nav a{font-size:16px}
+ section h2{font-size:20px}
+ footer p{font-size:12px}
+ .formularios-grid{grid-template-columns:1fr}
+ .espaco-formulario{padding:15px;font-size:14px}
+ fieldset{grid-template-columns:1fr;gap:8px}
+ fieldset input[type="submit"]
+ {width:100%}}
+@media (max-width:375px)
+{#sessao1 .item,
+ #sessao2 .item
+ {width:100%}header 
+ h1{font-size:18px}
+ nav a{font-size:14px}
+ section h2{font-size:18px}
+ footer p{font-size:10px}
+ header img{height:40px}
+ .formularios-grid{padding:0 10px}
+ .espaco-formulario{padding:12px;font-size:13px}fieldset{gap:6px 10px}}
+@media (max-width:768px)
+{.galeria-grid{grid-template-columns:repeat(12,1fr);grid-template-rows:repeat(6,50px)}
+ .galeria-item:nth-child(1){grid-area:1 / 1 / 5 / 7}
+ .galeria-item:nth-child(2){grid-area:1 / 7 / 3 / 13}
+ .galeria-item:nth-child(3){grid-area:3 / 7 / 5 / 10}
+ .galeria-item:nth-child(4){grid-area:3 / 10 / 5 / 13}
+ .galeria-item:nth-child(5){grid-area:5 / 1 / 7 / 9}
+ .galeria-item:nth-child(6){grid-area:5 / 9 / 7 / 13}}
