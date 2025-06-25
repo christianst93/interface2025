@@ -229,26 +229,17 @@ input, select, textarea {
   z-index: 2;
 }
 
-
-.row.align-height {
-  display: flex;
-}
-.row.align-height > .col-lg-6 {
-  display: flex;
-  flex-direction: column;
-}
-
-
-.row.align-height .carousel {
-  flex: 1;
-}
-
-.row.align-height .carousel img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
+.custom-carousel .carousel-inner {
+        height: 100%;
+    }
+    .custom-carousel .carousel-item {
+        height: 100%;
+    }
+    .custom-carousel .carousel-item img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
 
 caption {
   text-align: center;
