@@ -229,24 +229,7 @@ input, select, textarea {
   z-index: 2;
 }
 
-.custom-carousel .carousel-inner {
-  height: 100%;
-}
 
-.custom-carousel .carousel-item {
-  height: 100%;
-}
-
-.custom-carousel .carousel-item img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
-.table-responsive {
-  height: 650px;
-  overflow-y: auto;
-}
 
 caption {
   text-align: center;
