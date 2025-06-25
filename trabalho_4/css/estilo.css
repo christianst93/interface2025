@@ -229,8 +229,9 @@ input, select, textarea {
   z-index: 2;
 }
 
-
-
+.table-responsive {
+  padding-top: 50px;
+}
 caption {
   text-align: center;
   caption-side: top;
