@@ -229,10 +229,6 @@ input, select, textarea {
   z-index: 2;
 }
 
-.custom-carousel {
-  height: 500px;
-}
-
 .custom-carousel .carousel-inner {
   height: 100%;
 }
@@ -248,7 +244,7 @@ input, select, textarea {
 }
 
 .table-responsive {
-  height: 500px;
+  height: 650px;
   overflow-y: auto;
 }
 
