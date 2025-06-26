@@ -247,9 +247,16 @@ input, select, textarea {
   transition: transform 0.3s ease;
 }
 
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
 .galeria-item img:hover {
   transform: scale(1.03);
   z-index: 2;
+  border-radius: 8px;
 }
 
 .table-responsive {
