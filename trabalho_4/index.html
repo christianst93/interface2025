@@ -293,41 +293,37 @@
         <hr class="divisoria">
         <p>Sugestões? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; entre em contato:&nbsp;<a href="mailto:omega.games@gmail.com">omega.games@gmail.com</a></p>
     </footer>
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+<script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Seleciona apenas os h2 com classe scroll-animate
-  const headings = document.querySelectorAll('h2.scroll-animate');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animated');
-        // Opcional: Para animar apenas uma vez
-        // observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-  });
-  
-  headings.forEach(heading => {
-    observer.observe(heading);
-  });
-  
-  // Animação imediata para o primeiro elemento visível
-  if (headings.length > 0) {
-    const firstVisible = Array.from(headings).find(el => {
-      const rect = el.getBoundingClientRect();
-      return rect.top < window.innerHeight && rect.bottom >= 0;
-    });
-    
-    if (firstVisible) {
-      firstVisible.classList.add('animated');
+        
+    const headings = document.querySelectorAll('h2.scroll-animate');
+        
+    if (headings.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                }
+            });
+        }, { 
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+            
+        headings.forEach(heading => observer.observe(heading));
+    }       
+        
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+        
+    if (navbarToggler && navbarCollapse) {
+        navbarToggler.addEventListener('click', function() {
+            navbarCollapse.classList.toggle('show');
+        });
     }
-  }
 });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
