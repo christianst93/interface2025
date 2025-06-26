@@ -248,10 +248,10 @@ input, select, textarea {
 }
 
 .carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 8px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
 }
 .galeria-item img:hover {
   transform: scale(1.03);
@@ -262,6 +262,31 @@ input, select, textarea {
 .table-responsive {
   padding-top: 50px;
 }
+
+.table-responsive table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+  
+.table-responsive thead tr:first-child th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.table-responsive thead tr:first-child th:last-child {
+  border-top-right-radius: 8px;
+}
+  
+.table-responsive tfoot tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.table-responsive tfoot tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
 caption {
   text-align: center;
   caption-side: top;
@@ -276,6 +301,60 @@ th ,td {
 tfoot {
   text-align: center;
 }
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  gap: 100px
+}
+
+.news-card {
+  background: rgba(20, 20, 30, 0.7);
+  border-left: 3px solid var(--tag-color);
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.glitch-glow-effect:hover h3 {
+  animation: glitch 0.5s linear infinite;
+  text-shadow: 0 0 8px rgba(44, 135, 238, 0.7);
+}
+
+.glitch-glow-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(44, 135, 238, 0.3);
+}
+
+@keyframes glitch {
+  0% { transform: translate(1px, 0); }
+  25% { transform: translate(-1px, 1px); }
+  50% { transform: translate(0, -1px); }
+  75% { transform: translate(1px, 1px); }
+  100% { transform: translate(-1px, 0); }
+}
+
+.news-tag {
+  background: var(--tag-color);
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+    .h3, h3 {
+        font-size: 1.75rem;
+        text-align: start;
+    }
+  }
+
 footer {
   text-align: center;
   color: #fff;
