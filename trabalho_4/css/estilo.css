@@ -10,25 +10,30 @@ body {
   color: #fff;
 }
 
-h2 {
-  margin: 80px 0 30px;
-  text-align: center;
-}
-
-.scroll-animate {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s ease forwards;
-  animation-timeline: view();
-  animation-range: entry 20% cover 30%;
-}
-
-@keyframes fadeInUp {
-  to {
+  h2 {
+    margin: 80px 0 30px;
+    text-align: center;
+    width: fit-content;
+    padding: 15px 30px;    
+    font-weight: bold;    
+    margin-bottom: 20px;    
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  } 
+    
+  h2.animated {
     opacity: 1;
     transform: translateY(0);
   }
-}
+  
+  @media (prefers-reduced-motion: reduce) {
+    h2 {
+      transition: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
 
 
 section {
